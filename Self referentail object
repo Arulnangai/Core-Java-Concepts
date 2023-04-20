@@ -1,0 +1,40 @@
+import java.util.*;
+
+class SelfStud
+{
+int sno;
+String name;
+double wt;
+void set()
+{
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter No,Name,wt:");
+sno = sc.nextInt();
+name = sc.next();
+wt = sc.nextDouble();
+}
+void output()
+{
+System.out.println(sno+"\t"+name+"\t"+wt);
+}
+SelfStud process(SelfStud b)
+{
+if(wt>b.wt)
+ return this;
+else 
+  return b;
+}
+}
+
+class SelfTest
+{
+public static void main (String arg[])
+{
+SelfStud a = new SelfStud();
+SelfStud b = new SelfStud();
+a.set();
+b.set();
+SelfStud c =a.process(b);
+c.output();
+}
+}
