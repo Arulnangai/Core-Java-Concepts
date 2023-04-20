@@ -1,0 +1,57 @@
+import java.util.*;
+
+class Add
+{
+int a[][],b[][],r,c,d[][];
+
+void input()
+{
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter r & c: ");
+r = sc.nextInt();
+c = sc.nextInt();
+a = new int[r][c];
+b = new int[r][c];
+
+for (int i = 0;i<r;i++)
+for(int j=0;j<c;j++)
+{
+System.out.println("Enter ele :");
+a[i][j] = sc.nextInt();
+}
+
+for (int i = 0;i<r;i++)
+for(int j=0;j<c;j++)
+{
+System.out.println("Enter ele :");
+b[i][j] = sc.nextInt();
+}
+}
+
+void output()
+{
+for (int i = 0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+System.out.print((a[i][j]+b[i][j])+"\t");
+System.out.println("\n");
+}
+
+}
+
+
+
+}
+
+class ABMain
+{
+public static void main (String arg[])
+
+{ 
+Add aa = new Add();
+
+aa.input();
+
+aa.output();
+}
+}
